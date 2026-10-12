@@ -1,6 +1,7 @@
 import streamlit as st
 import joblib
 import pandas as pd
+from pathlib import Path
 
 # --------------------------------------------------
 # PAGE CONFIGURATION
@@ -84,7 +85,8 @@ st.markdown("""
 # --------------------------------------------------
 
 try:
-    model = joblib.load("model/student_model.pkl")
+    BASE_DIR = Path(__file__).resolve().parent
+model = joblib.load(BASE_DIR / "model" / "student_model.pkl")
 except Exception as e:
     st.error("Model could not be loaded. Please check model/student_model.pkl")
     st.stop()

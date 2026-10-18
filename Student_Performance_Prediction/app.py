@@ -84,11 +84,12 @@ st.markdown("""
 # LOAD MODEL
 # --------------------------------------------------
 
-try:
     BASE_DIR = Path(__file__).resolve().parent
-model = joblib.load(BASE_DIR / "model" / "student_model.pkl")
+    MODEL_PATH = BASE_DIR/"model"/"student_model.pkl"
+try:
+  model = joblib.load(MODEL_PATH)
 except Exception as e:
-    st.error("Model could not be loaded. Please check model/student_model.pkl")
+    st.error(f"Model could not be loaded.{e}")
     st.stop()
 
 # --------------------------------------------------

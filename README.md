@@ -3,6 +3,11 @@ Student Performance Prediction 🎓
 📌 About the Project
 
 Student Performance Prediction is a Machine Learning web application that predicts students' academic performance based on input data. It uses Python and Streamlit to provide a simple and user-friendly interface.
+## 🚀 Live Demo
+
+Try EduPredict here:
+
+https://student-performance-prediction-krutika.streamlit.app/
 
 🎯 Objectives
 
